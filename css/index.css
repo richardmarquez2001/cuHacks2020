@@ -1,0 +1,36 @@
+body{
+    background-color: #5D536B;
+}
+
+h1{
+    color: white;
+    text-align: center;
+
+}
+
+#name{
+
+    margin: auto;
+    width: 10%;
+    border: 1.5px solid black;
+    background-color: #989FCE;
+    text-align: center;
+    
+}
+
+.user-name{
+    display:block;
+    margin-right: auto;
+    margin-left : auto;
+    margin-bottom: 10px;
+}
+
+.buttons{
+    display:block;
+    margin-right: auto;
+    margin-left: auto;
+    background: transparent;
+    border: 1.5px solid black;
+    background-color: #989FCE;
+    width: 10%;
+}
