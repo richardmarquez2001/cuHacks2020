@@ -14,3 +14,15 @@ td {
   width: calc(80vh / 16);
   height: calc(80vh / 16);
 }
+
+button{
+  position:absolute;
+  top: 50%;
+  right: 20%;
+  margin: 20px;
+  font-size: 16px;
+  border-width: 5px;
+  border-color: #9756D8;
+  background-color: #9756D8;
+  color: #00D0FE;
+}
