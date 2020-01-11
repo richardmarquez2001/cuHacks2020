@@ -39,5 +39,6 @@ h1{
 }
 
 .buttons:hover{
-    
+    width: 12%;
+    transition: all 90ms;
 }
