@@ -49,14 +49,19 @@ a:hover {
   font-size: 20px;
   background: transparent;
   border: none;
-  color: white;
+  color: gold;
   border-bottom: 1px solid white;
-  width: 10%;
+  width: 15%;
   font-family: "Press Start 2P", cursive;
-  border-radius: 5px;
+  font-size: 25px;
   margin: 0 auto;
+  text-align: center;
+  height: 40px;
+  
 }
-
+::placeholder{
+    color: rgb(121, 103, 0);
+}
 .buttons {
   display: block;
   margin-right: auto;
