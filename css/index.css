@@ -45,17 +45,18 @@ a:hover {
 } */
 
 #name {
+
   display: block;
-  font-size: 20px;
   background: transparent;
   border: none;
   color: gold;
   border-bottom: 1px solid white;
-  width: 15%;
+  width: 18%;
   font-family: "Press Start 2P", cursive;
-  font-size: 25px;
+  font-size: 32px;
   margin: 0 auto;
   text-align: center;
+  padding-bottom: 5px;
   height: 40px;
   
 }
@@ -72,7 +73,10 @@ a:hover {
   background-color: #989fce;
   width: 20%;
 }
+#join-link{
+    padding-top: 12px;
 
+}
 div {
   text-align: center;
 }
