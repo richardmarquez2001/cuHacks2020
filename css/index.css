@@ -8,6 +8,7 @@
 }
 body {
   background-image: url("../images/background.jpg");
+  background-size: cover;
 }
 
 a {
@@ -45,7 +46,6 @@ a:hover {
 } */
 
 #name {
-
   display: block;
   background: transparent;
   border: none;
@@ -58,10 +58,9 @@ a:hover {
   text-align: center;
   padding-bottom: 5px;
   height: 40px;
-  
 }
-::placeholder{
-    color: rgb(121, 103, 0);
+::placeholder {
+  color: rgb(121, 103, 0);
 }
 .buttons {
   display: block;
@@ -73,9 +72,8 @@ a:hover {
   background-color: #989fce;
   width: 20%;
 }
-#join-link{
-    padding-top: 12px;
-
+#join-link {
+  padding-top: 12px;
 }
 div {
   text-align: center;
