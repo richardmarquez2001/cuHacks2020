@@ -10,9 +10,9 @@ $(document).ready(function() {
     let str = "";   //used to make grid
     let id = "";    //ids that were never used
     let baseColor = "#FFFFFF";  //bg color
-    let newColor = "";          //paint brush color
+    let newColor = "red";          //paint brush color
     let gridNum = 15;           // num of rows
-    let previous = "white";     //variable used for selecting color
+    let previous = "red";     //variable used for selecting color
     let isClickable = true;     //used for timer
     let canPlay = false;        //used for timer
     let time = 30;              //used for timer
