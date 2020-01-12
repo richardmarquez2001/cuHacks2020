@@ -7,10 +7,9 @@ $(document).ready(function() {
      * Light Purple: #975D6D8
      * Light Blue: #00D0FE
      */
-
     let str = "";
     let id = "";
-    let baseColor = "#FFFFFF";
+    let baseColor = "#9756D8";
     let newColor = "";
     let gridNum = 15;
     let previous = "white";
@@ -30,12 +29,7 @@ $(document).ready(function() {
     $("#grid-container").html(str);
 
     $("td")
-        .css({
-            width: "calc(80vh /" +  gridNum + ")",
-            height: "calc(80vh /" +  gridNum + ")",
-            border: "solid black 1px",
-            "background-color": baseColor
-        })
+        .css("background-color", baseColor)
 
         .mousedown(function(e){
         switch(e.which){
@@ -96,7 +90,9 @@ $(document).ready(function() {
         }
     });
 
+
     $("#getInfo").click(function(){
+        clearInterval();
         getGrid();
     });
 

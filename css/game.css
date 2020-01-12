@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: #6D72C3;
 }
 #grid-container {
   border-collapse: collapse;
@@ -10,13 +11,16 @@
   width: 80vh;
 }
 td {
-
+  border: solid black 1px;
+  width: calc(80vh / 16);
+  height: calc(80vh / 16);
 }
-
+.user-view{
+  text-align: center;
+}
 button{
   margin: 10px;
 }
-
 #getInfo{
   position:absolute;
   top: 50%;
@@ -27,4 +31,17 @@ button{
   border-color: #9756D8;
   background-color: #9756D8;
   color: #00D0FE;
+}
+
+#color-selector{
+  text-align: center; 
+}
+
+#grid-container{
+  margin: 0 auto;
+}
+
+#startTime{
+  margin: 0 auto;
+  height: 0 auto;
 }
