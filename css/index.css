@@ -10,9 +10,7 @@ body {
   background: #05668d;
 
 }
-div{
-    text-align: center;
-}
+
 a {
     text-decoration: none;
     color: white;
@@ -30,7 +28,7 @@ a:hover{
   text-align: center;
   margin-bottom: 30px;
   text-shadow: 0px 0px 5px white;
-  color: #679436;
+  color: gold;
   font-size: 100px;
   padding-top: 45px;
   
@@ -53,9 +51,14 @@ a:hover{
     margin: 25px;
     font-size: 20px;
     background: transparent;
-    border: 1.5px solid white;
+    border: none;
+    border-bottom: 1px solid white;
+    width: 10%;
     font-family:  "Press Start 2P", cursive;
+    border-radius: 5px;
+    
 }
+
 
 .buttons {
   display: block;
@@ -66,4 +69,8 @@ a:hover{
   border-radius: 5px;
   background-color: #989fce;
   width: 20%;
+}
+
+div{
+    text-align: center;
 }
