@@ -7,13 +7,14 @@ $(document).ready(function() {
      * Light Purple: #975D6D8
      * Light Blue: #00D0FE
      */
+
     let str = "";
     let id = "";
-    let baseColor = "#9756D8";
+    let baseColor = "#FFFFFF";
     let newColor = "";
-    let gridNum = 16;
+    let gridNum = 15;
     let previous = "red";
-    let currentColor = baseColor;
+
     for (let i = 0; i < gridNum; i++) {
         str += "<tr>";
         for (let j = 0; j < gridNum; j++) {
@@ -28,7 +29,12 @@ $(document).ready(function() {
     $("#grid-container").html(str);
 
     $("td")
-        .css("background-color", baseColor)
+        .css({
+            width: "calc(80vh /" +  gridNum + ")",
+            height: "calc(80vh /" +  gridNum + ")",
+            border: "solid black 1px",
+            "background-color": baseColor
+        })
 
         .mousedown(function(e){
         switch(e.which){
@@ -61,15 +67,15 @@ $(document).ready(function() {
 
     let start = new Date;
     $("#startTime").click(function(){
-        setInterval(function() {
-            $('#timer').text(Math.floor((new Date - start) / 1000) + " Seconds");
-        }, 1000);
+
+        let t = new Date().getTime();
+        let secs = Math.floor((t % (1000 * 60)) / 1000);
+        setInterval(1000, 1000)
+        $("#timer").html(secs.toString());
 
     });
 
-
     $("#getInfo").click(function(){
-        clearInterval();
         getGrid();
     });
 
