@@ -11,7 +11,9 @@
   width: 80vh;
 }
 td {
-
+  border: solid black 1px;
+  width: calc(80vh / 16);
+  height: calc(80vh / 16);
 }
 .user-view{
   text-align: center;
@@ -19,7 +21,6 @@ td {
 button{
   margin: 10px;
 }
-
 #getInfo{
   position:absolute;
   top: 50%;
