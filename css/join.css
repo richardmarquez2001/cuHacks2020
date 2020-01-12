@@ -32,15 +32,15 @@ input {
   width: 300px;
   text-transform: uppercase;
   padding: 5px;
-  font-size: 25px;
-  margin-bottom: 15px;
+  font-size: 30px;
+  margin-bottom: 50px;
 }
 button {
   background: none;
   border: none;
   color: white;
   padding: 5px;
-  font-size: 25px;
+  font-size: 50px;
 }
 button:hover {
   color: skyblue;
