@@ -89,12 +89,14 @@ $(document).ready(function() {
         .click(function(){
         $("#startTime").prop('disabled', false);
         $("#playagain").css("display", "none");
+        clearBoard();
     });
 
     var interval;
     $("#startTime").click(function(){
         if (isClickable){
             canPlay = true;
+            clearBoard();
         }
 
         var randNum = getRandInt(6);
@@ -113,6 +115,10 @@ $(document).ready(function() {
     }
 
     let current = 0;
+    function clearBoard(){
+        $("td")
+            .css("background-color", baseColor);
+    }
     function getTime() {
         let randNum = 0;
         let t = time + current;
@@ -125,7 +131,7 @@ $(document).ready(function() {
             $("#timer").html(t.toString() + " seconds");
             current -= 1;
         } else {
-            $("#timer").html("game done! haha");
+            $("#timer").html("Finished");
             $("#playagain").css("display", "block");
             stopInterval();
             $("#data").html(displayData(randNum).toString() + "%");
