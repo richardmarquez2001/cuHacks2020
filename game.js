@@ -131,7 +131,7 @@ $(document).ready(function() {
             $("#timer").html(t.toString() + " seconds");
             current -= 1;
         } else {
-            $("#timer").html("game done! haha");
+            $("#timer").html("Finished");
             $("#playagain").css("display", "block");
             stopInterval();
             $("#data").html(displayData(randNum).toString() + "%");
