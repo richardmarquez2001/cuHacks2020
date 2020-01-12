@@ -1,28 +1,27 @@
 @import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Press Start 2P", cursive;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Press Start 2P", cursive;
 }
 body {
-  background: #05668d;
-
+  background-image: url("../images/background.jpg");
 }
 
 a {
-    text-decoration: none;
-    color: white;
-  }
-.game-options{
-    margin: 25px;
-    font-size: 50px;
-    display: inline-block;
+  text-decoration: none;
+  color: white;
 }
-a:hover{
-    color: #427aa1;
-    text-shadow: 0px 0px 3px white;
+.game-options {
+  margin: 25px;
+  font-size: 50px;
+  display: inline-block;
+}
+a:hover {
+  color: skyblue;
+  text-shadow: 0px 0px 3px white;
 }
 #title {
   text-align: center;
@@ -31,7 +30,6 @@ a:hover{
   color: gold;
   font-size: 100px;
   padding-top: 45px;
-  
 }
 /* 
 #name {
@@ -46,19 +44,18 @@ a:hover{
 
 } */
 
-#name{
-    display: block;
-    margin: 25px;
-    font-size: 20px;
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid white;
-    width: 10%;
-    font-family:  "Press Start 2P", cursive;
-    border-radius: 5px;
-    
+#name {
+  display: block;
+  font-size: 20px;
+  background: transparent;
+  border: none;
+  color: white;
+  border-bottom: 1px solid white;
+  width: 10%;
+  font-family: "Press Start 2P", cursive;
+  border-radius: 5px;
+  margin: 0 auto;
 }
-
 
 .buttons {
   display: block;
@@ -71,6 +68,6 @@ a:hover{
   width: 20%;
 }
 
-div{
-    text-align: center;
+div {
+  text-align: center;
 }
