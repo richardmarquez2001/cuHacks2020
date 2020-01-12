@@ -13,7 +13,9 @@ $(document).ready(function() {
     let baseColor = "#FFFFFF";
     let newColor = "";
     let gridNum = 15;
-    let previous = "red";
+    let previous = "white";
+    let isClickable = true;
+    let canPlay = false;
 
     for (let i = 0; i < gridNum; i++) {
         str += "<tr>";
@@ -22,7 +24,6 @@ $(document).ready(function() {
 
             str += "<td id = '" + id + "'></td>";
         }
-
         str += "</tr>";
     }
 
@@ -65,14 +66,34 @@ $(document).ready(function() {
 
     }
 
-    let start = new Date;
+    $("#playagain")
+        .css("display", "none")
+
+        .click(function(){
+        $("#startTime").prop('disabled', false);
+        $("#playagain").css("display", "none");
+    });
+
     $("#startTime").click(function(){
+        if (isClickable){
+            canPlay = true;
+        }
+        let current = 0;
+        if (canPlay) {
+            $("#startTime").prop('disabled', true);
+            setInterval(function () {
+                let time = 5;
+                let t = time + current;
+                if (t > 0) {
+                    $("#timer").html(t.toString() + " seconds");
+                    current -= 1;
+                } else {
+                    $("#timer").html("game done! haha" + t.toString());
+                    $("#playagain").css("display", "block")
+                }
 
-        let t = new Date().getTime();
-        let secs = Math.floor((t % (1000 * 60)) / 1000);
-        setInterval(1000, 1000)
-        $("#timer").html(secs.toString());
-
+            }, 1000);
+        }
     });
 
     $("#getInfo").click(function(){
