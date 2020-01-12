@@ -1,62 +1,73 @@
 @import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
-
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Press Start 2P", cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Press Start 2P", cursive;
 }
+
 body {
-  background-image: url("../images/background.jpg");
-  background-size: cover;
-  color: white;
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+    color: white;
 }
+
 li {
-  list-style-type: none;
-  font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
+    list-style-type: none;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
 a {
-  text-decoration: none;
-  color: white;
+    text-decoration: none;
+    color: white;
 }
+
 #start {
-  margin: 50px;
-  font-size: 50px;
-  display: inline-block;
+    margin: 50px;
+    font-size: 50px;
+    display: inline-block;
 }
+
 #start:hover {
-  color: skyblue;
-  text-shadow: 0px 0px 3px white;
+    color: skyblue;
+    text-shadow: 0px 0px 3px white;
 }
+
 #back {
-  font-size: 25px;
-  display: inline-block;
-  margin: 10px;
+    font-size: 25px;
+    display: inline-block;
+    margin: 10px;
 }
+
 #back:hover {
-  color: skyblue;
-  text-shadow: 0px 0px 3px white;
+    color: skyblue;
+    text-shadow: 0px 0px 3px white;
 }
+
 #players {
-  font-size: 35px;
+    font-size: 35px;
 }
+
 div {
-  text-align: center;
+    text-align: center;
 }
+
 #room-code {
-  background: #117ecc;
-  border: solid 3px white;
-  font-size: 50px;
-  padding: 15px;
+    background: #117ecc;
+    border: solid 3px white;
+    font-size: 50px;
+    padding: 15px;
 }
+
 #room-code:hover {
-  color: gold;
-  text-shadow: 0px 0px 3px white;
+    color: gold;
+    text-shadow: 0px 0px 3px white;
 }
+
 #title {
-  font-size: 100px;
-  color: gold;
-  text-shadow: 0px 0px 5px white;
-  margin-bottom: 30px;
+    font-size: 100px;
+    color: gold;
+    text-shadow: 0px 0px 5px white;
+    margin-bottom: 30px;
 }
