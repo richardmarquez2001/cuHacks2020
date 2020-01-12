@@ -175,8 +175,8 @@ $(document).ready(function() {
                 count += 1;
             }
         }
-        console.log(count.toString());
-        return Math.floor(count / 256);
+
+        return ((count / 256) * 100);
     }
 
     function getPhoto(index){
