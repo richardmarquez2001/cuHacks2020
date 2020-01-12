@@ -9,7 +9,7 @@ $(document).ready(function() {
      */
     let str = "";
     let id = "";
-    let baseColor = "#9756D8";
+    let baseColor = "#FFFFFF";
     let newColor = "";
     let gridNum = 15;
     let previous = "white";
