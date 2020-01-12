@@ -10,6 +10,8 @@
     <title>game</title>
 </head>
 
+
+
 <body oncontextmenu="return false;">
 <h1 class = "user-view" id = "title">PIXELIT</h1>
 <h2 class = "user-view" id = "timer"></h2>
@@ -21,7 +23,7 @@
             <li>Right-click to erase.</li>
         </ul>
     </div>
-
+   
     <table id="grid-container"></table>
     <div class="color-selector">
         <button id="cRed" style="height: 30px; width: 30px; background-color:red; border-color: black"></button>
@@ -38,7 +40,27 @@
         <button id="playagain">Play Again</button>
     </div>
     <div id="image"></div>
+
+
+
+    
+
+     <script>
+      function popFunction(){
+        if (confirm("Start the game?")){
+          txt = "Yes";
+        }
+        else{
+          txt = "Get out";
+        }
+      }
+      
+      </script>
+      <body onload="popFunction()"></body>
 </body>
+
+
+
 <script src="game.js"></script>
 
 </html>
