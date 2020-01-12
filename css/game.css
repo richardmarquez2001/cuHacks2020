@@ -1,8 +1,12 @@
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #6D72C3;
+}
+body {
+  background-image: url("../images/background.jpg");
+  background-size: cover;
 }
 #grid-container {
   border-collapse: collapse;
@@ -15,56 +19,69 @@ td {
   width: calc(80vh / 16);
   height: calc(80vh / 16);
 }
-.user-view{
+.user-view {
   text-align: center;
+  font-family: "Press Start 2P", cursive;
 }
-button{
+
+#timer{
+  color:red;
+}
+
+#title {
+  padding-top: 10px;
+  color: gold;
+  
+}
+
+#data{
+  color : white;
+}
+button {
   margin: 10px;
 }
-#getInfo{
-  position:absolute;
+#getInfo {
+  position: absolute;
   top: 50%;
   right: 20%;
   margin: 20px;
   font-size: 16px;
   border-width: 5px;
-  border-color: #9756D8;
-  background-color: #9756D8;
-  color: #00D0FE;
+  border-color: #9756d8;
+  background-color: #9756d8;
+  color: #00d0fe;
 }
 
-.color-selector{
-  text-align: center; 
-  padding-right: 10px; 
-  
+.color-selector {
+  text-align: center;
+  padding-right: 10px;
 }
 
-#grid-container{
+#grid-container {
   margin: 0 auto;
 }
 
-#startTime{
+#startTime {
   margin: 0 auto;
   height: 32px;
-  width: 36px; 
-  
+  width: 36px;
+
   background: transparent;
   border: 1.5px solid black;
   border-radius: 5px;
-  background-color: #6D72C3;
-  
+  background-color: #6d72c3;
+
   padding-top: 15px;
   text-align: center;
 }
 
-
-#playagain{
+#playagain {
   margin: 0 auto;
   position: absolute;
   height: 30px;
   width: 35px;
   background: transparent;
-  border : 1.5px solid black;
+  border: 1.5px solid black;
   background-color: black;
-  color:white;
+  color: white;
 }
