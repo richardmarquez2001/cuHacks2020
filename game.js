@@ -97,11 +97,8 @@ $(document).ready(function() {
             canPlay = true;
         }
 
-        randNum = getRandInt(6);
-        photo = getPhoto(randNum);
-
-
-
+        var randNum = getRandInt(6);
+        getPhoto(0);
 
         if (canPlay) {
             $("#startTime").prop('disabled', true);
@@ -117,7 +114,7 @@ $(document).ready(function() {
 
     let current = 0;
     function getTime() {
-        randNum = getRandInt(6);
+        let randNum = 0;
         let t = time + current;
         console.log(`-----`);
         console.log(t);
@@ -182,27 +179,28 @@ $(document).ready(function() {
     function getPhoto(index){
         switch (index) {
             case 0:
-                //get img0
+                str = "<img src = \"images/0.png\" alt = \"yes\">";
                 break;
             case 1:
-                //return img1
+                str = "<img src = \"images/1.png\" alt = \"yes\">";
                 break;
             case 2:
-                //return img2
+                str = "<img src = \"images/2.png\" alt = \"yes\">";
                 break;
             case 3:
-                //return img3
+                str = "<img src = \"images/3.png\" alt = \"yes\">";
                 break;
             case 4:
-                //return img4
+                str = "<img src = \"images/4.png\" alt = \"yes\">";
                 break;
             case 5:
-                //return img5
+                str = "<img src = \"images/5.png\" alt = \"yes\">";
                 break;
             case 6:
-                //return img6
+                str = "<img src = \"images/6.png\" alt = \"yes\">";
                 break;
         }
+        $("#image").html(str);
 
     }
 
