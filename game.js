@@ -83,8 +83,6 @@ $(document).ready(function() {
 
     }
 
-
-
     $("#playagain")
         .css("display", "none")
 
@@ -92,6 +90,7 @@ $(document).ready(function() {
         $("#startTime").prop('disabled', false);
         $("#playagain").css("display", "none");
     });
+
     var interval;
     $("#startTime").click(function(){
         if (isClickable){
@@ -100,7 +99,8 @@ $(document).ready(function() {
 
         randNum = getRandInt(6);
         photo = getPhoto(randNum);
-        //something something display photo
+
+
 
 
         if (canPlay) {
