@@ -9,7 +9,7 @@ $(document).ready(function() {
      */
     let str = "";   //used to make grid
     let id = "";    //ids that were never used
-    let baseColor = "#9756D8";  //bg color
+    let baseColor = "#FFFFFF";  //bg color
     let newColor = "";          //paint brush color
     let gridNum = 15;           // num of rows
     let previous = "white";     //variable used for selecting color
