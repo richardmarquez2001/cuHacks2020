@@ -16,6 +16,9 @@ td {
 }
 
 button{
+  margin: 10px;
+}
+#getInfo{
   position:absolute;
   top: 50%;
   right: 20%;
