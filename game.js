@@ -118,12 +118,7 @@ $(document).ready(function() {
         $("#data").html(arr.toString());
     }
 
-    function removeDash(str){
-        str.slice(0, -1);
-        if (str[-1] === "-"){
-            removeDash(str);
-        }else{
-            return str;
-        }
+    function getRandInt(n){
+        return Math.floor(Math.random() * Math.floor(n))
     }
 });
