@@ -11,9 +11,11 @@ $(document).ready(function() {
     let id = "";
     let baseColor = "#9756D8";
     let newColor = "";
-    let gridNum = 16;
-    let previous = "red";
-    let currentColor = baseColor;
+    let gridNum = 15;
+    let previous = "white";
+    let isClickable = true;
+    let canPlay = false;
+
     for (let i = 0; i < gridNum; i++) {
         str += "<tr>";
         for (let j = 0; j < gridNum; j++) {
@@ -21,7 +23,6 @@ $(document).ready(function() {
 
             str += "<td id = '" + id + "'></td>";
         }
-
         str += "</tr>";
     }
 
@@ -59,12 +60,34 @@ $(document).ready(function() {
 
     }
 
-    let start = new Date;
-    $("#startTime").click(function(){
-        setInterval(function() {
-            $('#timer').text(Math.floor((new Date - start) / 1000) + " Seconds");
-        }, 1000);
+    $("#playagain")
+        .css("display", "none")
 
+        .click(function(){
+        $("#startTime").prop('disabled', false);
+        $("#playagain").css("display", "none");
+    });
+
+    $("#startTime").click(function(){
+        if (isClickable){
+            canPlay = true;
+        }
+        let current = 0;
+        if (canPlay) {
+            $("#startTime").prop('disabled', true);
+            setInterval(function () {
+                let time = 5;
+                let t = time + current;
+                if (t > 0) {
+                    $("#timer").html(t.toString() + " seconds");
+                    current -= 1;
+                } else {
+                    $("#timer").html("game done! haha" + t.toString());
+                    $("#playagain").css("display", "block")
+                }
+
+            }, 1000);
+        }
     });
 
 
