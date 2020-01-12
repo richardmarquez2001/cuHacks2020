@@ -28,6 +28,11 @@ $(document).ready(function() {
 
     $("#grid-container").html(str);
 
+    $("td").css({
+        width: "calc(80vh / " + gridNum.toString() + ")",
+        height: "calc(80vh / " + gridNum.toString() + ")",
+    });
+
     $("td")
         .css("background-color", baseColor)
 
@@ -103,8 +108,6 @@ $(document).ready(function() {
 
             for (let j = 0; j < gridNum; j++) {
                 id = "#" + i.toString() + "-" + j.toString();
-                id = removeDash(id);
-
                 n = $(id).css("background-color");
 
                 arr.push(n);
