@@ -16,6 +16,9 @@ $(document).ready(function() {
     let isClickable = true;     //used for timer
     let canPlay = false;        //used for timer
     let time = 30;              //used for timer
+    let current = 0;
+    let isPaintable = false;
+    let previousColor = previous;
 
     let arr = [
         //0 : Pokeball
@@ -40,21 +43,33 @@ $(document).ready(function() {
             id = i.toString() + "-" + j.toString();
 
             str += "<td id = '" + id + "'></td>";
+
         }
         str += "</tr>";
     }
 
     $("#grid-container").html(str);
 
-    $("td").css({
-        width: "calc(80vh / " + gridNum.toString() + ")",
-        height: "calc(80vh / " + gridNum.toString() + ")",
-    });
+
+    function addPaint(){
+        $("td").addClass("canPaint");
+    }
 
     $("td")
-        .css("background-color", baseColor)
+        .css({
+        width: "calc(80vh / " + gridNum.toString() + ")",
+        height: "calc(80vh / " + gridNum.toString() + ")",
+        "background-color": baseColor
+
+    })
+        .addClass("canPaint")
 
         .mousedown(function(e){
+            addPaint();
+            // $(".noPaint").addClass("canPaint");
+            // $(".canPaint").removeClass("noPaint");
+            isPaintable = true;
+            $("#yes").html("@mousedown " + isPaintable.toString());
         switch(e.which){
             case 1:
                 $(this).css("background-color", newColor);
@@ -62,22 +77,50 @@ $(document).ready(function() {
             case 3:
                 $(this).css("background-color", baseColor);
         }
-    });
 
-    $("#cRed").click(function(){newColor = "red"; active("cRed")});
-    $("#cBlue").click(function(){newColor = "blue"; active("cBlue")});
-    $("#cGreen").click(function(){newColor = "green"; active("cGreen")});
-    $("#cYellow").click(function(){newColor = "yellow"; active("cYellow")});
-    $("#cPurple").click(function(){newColor = "rgb(76, 1, 146)"; active("cPurple")});
-    $("#cPink").click(function(){newColor = "rgb(255, 0, 221)"; active("cPink")});
-    $("#cOrange").click(function(){newColor = "rgb(255, 102, 0)"; active("cOrange")});
-    $("#cBrown").click(function(){newColor = "rgb(75, 43, 43)"; active("cBrown")});
-    $("#cBlack").click(function(){newColor = "black"; active("cBlack")});
-    $("#cWhite").click(function(){newColor = "#FFFFFF"; active("cWhite")});
+    })
+        .mousemove(function(e){
+            if (isPaintable){
+                $("#yes").html("@mousemove " + isPaintable.toString());
+                $(this).hover(function(){
+                    if (($(this).hasClass("canPaint"))) {
+                        switch(e.which) {
+                            case 1:
+                                $(this).removeClass("canPaint");
+                                $(this).css("background-color", newColor);
+                                break;
+                            case 3:
+                                $(this).css("background-color", baseColor);
+                                break;
+                        }
+                    }
+
+                })
+            }else{
+            }
+        })
+
+        .mouseup(function(){
+            isPaintable = false;
+            $("#yes").html("@mouseup " + isPaintable.toString());
+
+        });
+
+    $("#cRed").click(function(){newColor = "red"; active("cRed")}); //red
+    $("#cBlue").click(function(){newColor = "blue"; active("cBlue")}); //blue
+    $("#cGreen").click(function(){newColor = "green"; active("cGreen")}); //green
+    $("#cYellow").click(function(){newColor = "yellow"; active("cYellow")}); //yellow
+    $("#cPurple").click(function(){newColor = "rgb(76, 1, 146)"; active("cPurple")}); //purple
+    $("#cPink").click(function(){newColor = "rgb(255, 0, 221)"; active("cPink")}); //pink
+    $("#cOrange").click(function(){newColor = "rgb(255, 102, 0)"; active("cOrange")}); //orange
+    $("#cBrown").click(function(){newColor = "rgb(75, 43, 43)"; active("cBrown")}); //brown
+    $("#cBlack").click(function(){newColor = "black"; active("cBlack")}); //black
+    $("#cWhite").click(function(){newColor = "#FFFFFF"; active("cWhite")}); //white
 
     function active(bColor){
         $("#" + previous).css("border-width", "2px");
         $("#" + bColor).css("border-width", "5px");
+        previousColor = previous;
 
         previous = bColor;
 
@@ -88,7 +131,7 @@ $(document).ready(function() {
 
         .click(function(){
         $("#startTime").prop('disabled', false);
-        $("#playagain").css("display", "none");
+        $(this).css("display", "none");
         clearBoard();
     });
 
@@ -114,11 +157,12 @@ $(document).ready(function() {
         return false;
     }
 
-    let current = 0;
+
     function clearBoard(){
         $("td")
             .css("background-color", baseColor);
     }
+
     function getTime() {
         let randNum = 0;
         let t = time + current;
